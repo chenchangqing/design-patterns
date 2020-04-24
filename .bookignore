@@ -1,3 +1,6 @@
 **/z资料/
 **/ignore/
-docs/
+.gitignore
+.gitbook.sh
+.gitbook.sh.swp
+.bookignore

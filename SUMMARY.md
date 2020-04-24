@@ -68,7 +68,7 @@
     * [9.4.定义MapLocationDelegate](09_抽象工厂/04_定义MapLocationDelegate/readme.md)
     * [9.5.定义MapLocationDProtocol](09_抽象工厂/05_定义MapLocationDProtocol/readme.md)
     * [9.6.总结和解答](09_抽象工厂/06_总结和解答/readme.md)
-    * [1.8.解答](08_工厂方法模式/08_解答/readme.md)
+    * [9.7.解答](09_工厂方法模式/07_解答/readme.md)
 * 10.抽象工厂-SDK实战
     * [10.1.工厂模式-解决问题](10_抽象工厂/01_工厂模式-解决问题/readme.md)
     * [10.2.工厂模式-百度地图-单次定位](10_抽象工厂/02_工厂模式-百度地图-单次定位/readme.md)

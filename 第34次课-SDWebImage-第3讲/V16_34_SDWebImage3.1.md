@@ -1,2 +1,0 @@
-# SDWebImage3.1
-

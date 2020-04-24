@@ -1,2 +1,0 @@
-# SDWebImageManagerDelegate.h
-

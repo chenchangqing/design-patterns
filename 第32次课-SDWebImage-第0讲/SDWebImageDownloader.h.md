@@ -1,2 +1,0 @@
-# SDWebImageDownloader.h
-

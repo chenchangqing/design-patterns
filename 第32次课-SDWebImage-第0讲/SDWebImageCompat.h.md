@@ -1,2 +1,0 @@
-# SDWebImageCompat.h
-

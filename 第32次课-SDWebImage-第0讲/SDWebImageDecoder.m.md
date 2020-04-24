@@ -1,2 +1,0 @@
-# SDWebImageDecoder.m
-

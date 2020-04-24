@@ -1,0 +1,2 @@
+# SDImageCacheDelegate.h
+

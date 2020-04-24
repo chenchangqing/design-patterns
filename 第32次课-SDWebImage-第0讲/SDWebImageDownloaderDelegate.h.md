@@ -1,0 +1,2 @@
+# SDWebImageDownloaderDelegate.h
+

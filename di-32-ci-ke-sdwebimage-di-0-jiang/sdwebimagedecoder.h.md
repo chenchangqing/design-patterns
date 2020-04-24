@@ -1,2 +1,0 @@
-# SDWebImageDecoder.h
-

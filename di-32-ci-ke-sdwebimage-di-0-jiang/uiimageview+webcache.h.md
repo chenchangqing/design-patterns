@@ -1,2 +1,0 @@
-# UIImageView+WebCache.h
-

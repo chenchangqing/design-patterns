@@ -1,0 +1,5376 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>24.7.插入数据-Optional自定义可选类型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08_插入数据-自定义可选类型-添加约束条件.html" />
+    
+    
+    <link rel="prev" href="06_插入数据-运算符函数.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    1.UML图的分析讲解
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01_UML图的分析讲解/01_UML图的介绍.html">
+            
+                <a href="../01_UML图的分析讲解/01_UML图的介绍.html">
+            
+                    
+                    1.1.UML图的介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01_UML图的分析讲解/02_UML使用.html">
+            
+                <a href="../01_UML图的分析讲解/02_UML使用.html">
+            
+                    
+                    1.2.UML使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01_UML图的分析讲解/03_类图的关系.html">
+            
+                <a href="../01_UML图的分析讲解/03_类图的关系.html">
+            
+                    
+                    1.3.类图的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01_UML图的分析讲解/04_类图关系分析01.html">
+            
+                <a href="../01_UML图的分析讲解/04_类图关系分析01.html">
+            
+                    
+                    1.4.类图关系分析01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01_UML图的分析讲解/05_类图关系分析02.html">
+            
+                <a href="../01_UML图的分析讲解/05_类图关系分析02.html">
+            
+                    
+                    1.5.类图关系分析02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01_UML图的分析讲解/06_静态模型分析.html">
+            
+                <a href="../01_UML图的分析讲解/06_静态模型分析.html">
+            
+                    
+                    1.6.静态模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../01_UML图的分析讲解/07_动态模型分析.html">
+            
+                <a href="../01_UML图的分析讲解/07_动态模型分析.html">
+            
+                    
+                    1.7.动态模型分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../01_UML图的分析讲解/08_重点回顾.html">
+            
+                <a href="../01_UML图的分析讲解/08_重点回顾.html">
+            
+                    
+                    1.8.重点回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    2.工厂模式&外观模式&责任链模式&迭代模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02_工厂模式_外观模式_责任链模式_迭代模式/01_抽象工厂.html">
+            
+                <a href="../02_工厂模式_外观模式_责任链模式_迭代模式/01_抽象工厂.html">
+            
+                    
+                    2.1.抽象工厂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02_工厂模式_外观模式_责任链模式_迭代模式/02_责任链&外观模式.html">
+            
+                <a href="../02_工厂模式_外观模式_责任链模式_迭代模式/02_责任链&外观模式.html">
+            
+                    
+                    2.2.责任链&外观模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02_工厂模式_外观模式_责任链模式_迭代模式/03_迭代模式.html">
+            
+                <a href="../02_工厂模式_外观模式_责任链模式_迭代模式/03_迭代模式.html">
+            
+                    
+                    2.3.迭代模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02_工厂模式_外观模式_责任链模式_迭代模式/04_ui架构.html">
+            
+                <a href="../02_工厂模式_外观模式_责任链模式_迭代模式/04_ui架构.html">
+            
+                    
+                    2.4.ui架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    3.命令模式+路由+消息机制+消息转发机制
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../03_命令模式+路由+消息机制+消息转发机制/01_消息发送机制.html">
+            
+                <a href="../03_命令模式+路由+消息机制+消息转发机制/01_消息发送机制.html">
+            
+                    
+                    3.1.消息发送机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../03_命令模式+路由+消息机制+消息转发机制/02_消息转发机制.html">
+            
+                <a href="../03_命令模式+路由+消息机制+消息转发机制/02_消息转发机制.html">
+            
+                    
+                    3.2.消息转发机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../03_命令模式+路由+消息机制+消息转发机制/03_消息转发机制模拟多继承.html">
+            
+                <a href="../03_命令模式+路由+消息机制+消息转发机制/03_消息转发机制模拟多继承.html">
+            
+                    
+                    3.3.消息转发机制模拟多继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../03_命令模式+路由+消息机制+消息转发机制/04_命令模式在路由中的使用.html">
+            
+                <a href="../03_命令模式+路由+消息机制+消息转发机制/04_命令模式在路由中的使用.html">
+            
+                    
+                    3.4.命令模式在路由中的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    4.命令模式-原理分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../04_命令模式-原理分析/01_课程安排与个人介绍.html">
+            
+                <a href="../04_命令模式-原理分析/01_课程安排与个人介绍.html">
+            
+                    
+                    4.1.课程安排与个人介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../04_命令模式-原理分析/02_基本概念与角色划分.html">
+            
+                <a href="../04_命令模式-原理分析/02_基本概念与角色划分.html">
+            
+                    
+                    4.2.基本概念与角色划分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../04_命令模式-原理分析/03_原理案例.html">
+            
+                <a href="../04_命令模式-原理分析/03_原理案例.html">
+            
+                    
+                    4.3.原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../04_命令模式-原理分析/04_生活案例-电脑案例.html">
+            
+                <a href="../04_命令模式-原理分析/04_生活案例-电脑案例.html">
+            
+                    
+                    4.4.生活案例-电脑案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../04_命令模式-原理分析/05_生活案例-游戏案例-角色分析.html">
+            
+                <a href="../04_命令模式-原理分析/05_生活案例-游戏案例-角色分析.html">
+            
+                    
+                    4.5.生活案例-游戏案例-角色分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../04_命令模式-原理分析/06_生活案例-游戏案例-角色实现.html">
+            
+                <a href="../04_命令模式-原理分析/06_生活案例-游戏案例-角色实现.html">
+            
+                    
+                    4.6.生活案例-游戏案例-角色实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../04_命令模式-原理分析/07_Swift实现.html">
+            
+                <a href="../04_命令模式-原理分析/07_Swift实现.html">
+            
+                    
+                    4.7.Swift实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../04_命令模式-原理分析/08_问题解答.html">
+            
+                <a href="../04_命令模式-原理分析/08_问题解答.html">
+            
+                    
+                    4.8.问题解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../04_命令模式-原理分析/09_个人分享.html">
+            
+                <a href="../04_命令模式-原理分析/09_个人分享.html">
+            
+                    
+                    4.9.个人分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    5.命令模式-泛型设计
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../05_命令模式-泛型设计/01_UML类图分析.html">
+            
+                <a href="../05_命令模式-泛型设计/01_UML类图分析.html">
+            
+                    
+                    5.1.UML类图分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../05_命令模式-泛型设计/02_动态命令-命令实现.html">
+            
+                <a href="../05_命令模式-泛型设计/02_动态命令-命令实现.html">
+            
+                    
+                    5.2.动态命令-命令实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../05_命令模式-泛型设计/03_动态命令-管理器实现.html">
+            
+                <a href="../05_命令模式-泛型设计/03_动态命令-管理器实现.html">
+            
+                    
+                    5.3.动态命令-管理器实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../05_命令模式-泛型设计/04_复合命令.html">
+            
+                <a href="../05_命令模式-泛型设计/04_复合命令.html">
+            
+                    
+                    5.4.复合命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05_命令模式-泛型设计/05_泛型命令.html">
+            
+                <a href="../05_命令模式-泛型设计/05_泛型命令.html">
+            
+                    
+                    5.5.泛型命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../05_命令模式-泛型设计/06_并发处理.html">
+            
+                <a href="../05_命令模式-泛型设计/06_并发处理.html">
+            
+                    
+                    5.6.并发处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../05_命令模式-泛型设计/07_闭包实现.html">
+            
+                <a href="../05_命令模式-泛型设计/07_闭包实现.html">
+            
+                    
+                    5.7.闭包实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../05_命令模式-泛型设计/08_解答.html">
+            
+                <a href="../05_命令模式-泛型设计/08_解答.html">
+            
+                    
+                    5.8.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../05_命令模式-泛型设计/09_分享.html">
+            
+                <a href="../05_命令模式-泛型设计/09_分享.html">
+            
+                    
+                    5.9.分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    6.命令模式-开发应用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../06_命令模式-开发应用/01_Swift实现-动态命令.html">
+            
+                <a href="../06_命令模式-开发应用/01_Swift实现-动态命令.html">
+            
+                    
+                    6.1.Swift实现-动态命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../06_命令模式-开发应用/02_Swift实现-复合命令.html">
+            
+                <a href="../06_命令模式-开发应用/02_Swift实现-复合命令.html">
+            
+                    
+                    6.2.Swift实现-复合命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../06_命令模式-开发应用/03_Swift实现-泛型命令.html">
+            
+                <a href="../06_命令模式-开发应用/03_Swift实现-泛型命令.html">
+            
+                    
+                    6.3.Swift实现-泛型命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../06_命令模式-开发应用/04_Swift实现-闭包命令.html">
+            
+                <a href="../06_命令模式-开发应用/04_Swift实现-闭包命令.html">
+            
+                    
+                    6.4.Swift实现-闭包命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    7.命令模式应用+适配器模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../07_命令模式应用+适配器模式/01_命令模式-购物车案例.html">
+            
+                <a href="../07_命令模式应用+适配器模式/01_命令模式-购物车案例.html">
+            
+                    
+                    7.1.命令模式-购物车案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../07_命令模式应用+适配器模式/02_命令模式-应用案例.html">
+            
+                <a href="../07_命令模式应用+适配器模式/02_命令模式-应用案例.html">
+            
+                    
+                    7.2.命令模式-应用案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../07_命令模式应用+适配器模式/03_适配器模式-角色划分.html">
+            
+                <a href="../07_命令模式应用+适配器模式/03_适配器模式-角色划分.html">
+            
+                    
+                    7.3.适配器模式-角色划分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../07_命令模式应用+适配器模式/04_适配器模式-类适配器.html">
+            
+                <a href="../07_命令模式应用+适配器模式/04_适配器模式-类适配器.html">
+            
+                    
+                    7.4.适配器模式-类适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../07_命令模式应用+适配器模式/05_适配器模式-对象适配器.html">
+            
+                <a href="../07_命令模式应用+适配器模式/05_适配器模式-对象适配器.html">
+            
+                    
+                    7.5.适配器模式-对象适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../07_命令模式应用+适配器模式/06_适配器模式-开发案例.html">
+            
+                <a href="../07_命令模式应用+适配器模式/06_适配器模式-开发案例.html">
+            
+                    
+                    7.6.适配器模式-开发案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    8.工厂方法模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../08_工厂方法模式/01_角色分析.html">
+            
+                <a href="../08_工厂方法模式/01_角色分析.html">
+            
+                    
+                    1.1.角色分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../08_工厂方法模式/02_原理案例.html">
+            
+                <a href="../08_工厂方法模式/02_原理案例.html">
+            
+                    
+                    1.2.原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../08_工厂方法模式/03_原理案例-UML类图.html">
+            
+                <a href="../08_工厂方法模式/03_原理案例-UML类图.html">
+            
+                    
+                    1.3.原理案例-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../08_工厂方法模式/04_开发案例-原理分析.html">
+            
+                <a href="../08_工厂方法模式/04_开发案例-原理分析.html">
+            
+                    
+                    1.4.开发案例-原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../08_工厂方法模式/05_开发案例-工厂实现.html">
+            
+                <a href="../08_工厂方法模式/05_开发案例-工厂实现.html">
+            
+                    
+                    1.5.开发案例-工厂实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../08_工厂方法模式/06_开发案例-动态切换-原理分析.html">
+            
+                <a href="../08_工厂方法模式/06_开发案例-动态切换-原理分析.html">
+            
+                    
+                    1.6.开发案例-动态切换-原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../08_工厂方法模式/07_开发案例-动态切换-引擎实现.html">
+            
+                <a href="../08_工厂方法模式/07_开发案例-动态切换-引擎实现.html">
+            
+                    
+                    1.7.开发案例-动态切换-引擎实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../08_工厂方法模式/08_解答.html">
+            
+                <a href="../08_工厂方法模式/08_解答.html">
+            
+                    
+                    1.8.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    9.抽象工厂
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../09_抽象工厂/01_角色分析.html">
+            
+                <a href="../09_抽象工厂/01_角色分析.html">
+            
+                    
+                    9.1.角色分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../09_抽象工厂/02_百度集成.html">
+            
+                <a href="../09_抽象工厂/02_百度集成.html">
+            
+                    
+                    9.2.百度集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../09_抽象工厂/03_高德集成.html">
+            
+                <a href="../09_抽象工厂/03_高德集成.html">
+            
+                    
+                    9.3.高德集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../09_抽象工厂/04_定义MapLocationDelegate.html">
+            
+                <a href="../09_抽象工厂/04_定义MapLocationDelegate.html">
+            
+                    
+                    9.4.定义MapLocationDelegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../09_抽象工厂/05_定义MapLocationDProtocol.html">
+            
+                <a href="../09_抽象工厂/05_定义MapLocationDProtocol.html">
+            
+                    
+                    9.5.定义MapLocationDProtocol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../09_抽象工厂/06_总结和解答.html">
+            
+                <a href="../09_抽象工厂/06_总结和解答.html">
+            
+                    
+                    9.6.总结和解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    10.抽象工厂-SDK实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../10_抽象工厂/01_工厂模式-解决问题.html">
+            
+                <a href="../10_抽象工厂/01_工厂模式-解决问题.html">
+            
+                    
+                    10.1.工厂模式-解决问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../10_抽象工厂/02_工厂模式-百度地图-单次定位.html">
+            
+                <a href="../10_抽象工厂/02_工厂模式-百度地图-单次定位.html">
+            
+                    
+                    10.2.工厂模式-百度地图-单次定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../10_抽象工厂/03_工厂模式-百度地图-持续定位.html">
+            
+                <a href="../10_抽象工厂/03_工厂模式-百度地图-持续定位.html">
+            
+                    
+                    10.3.工厂模式-百度地图-持续定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../10_抽象工厂/04_高德地图-定位实现.html">
+            
+                <a href="../10_抽象工厂/04_高德地图-定位实现.html">
+            
+                    
+                    10.4.高德地图-定位实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../10_抽象工厂/05_工厂模式-解答.html">
+            
+                <a href="../10_抽象工厂/05_工厂模式-解答.html">
+            
+                    
+                    10.5.工厂模式-解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    11.抽象工厂-地图定位
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../11_抽象工厂-地图定位/01_聚合SDK设计-解决引用问题.html">
+            
+                <a href="../11_抽象工厂-地图定位/01_聚合SDK设计-解决引用问题.html">
+            
+                    
+                    11.1.聚合SDK设计-解决引用问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../11_抽象工厂-地图定位/02_工厂模式-百度地图-单次定位.html">
+            
+                <a href="../11_抽象工厂-地图定位/02_工厂模式-百度地图-单次定位.html">
+            
+                    
+                    11.2.聚合SDK设计-显示定位图层-百度地图-单次定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../11_抽象工厂-地图定位/03_工厂模式-百度地图-持续定位.html">
+            
+                <a href="../11_抽象工厂-地图定位/03_工厂模式-百度地图-持续定位.html">
+            
+                    
+                    11.3.聚合SDK设计-显示定位图层-百度地图-连续定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../11_抽象工厂-地图定位/04_聚合SDK设计-显示定位图层-百度地图-添加大头针.html">
+            
+                <a href="../11_抽象工厂-地图定位/04_聚合SDK设计-显示定位图层-百度地图-添加大头针.html">
+            
+                    
+                    11.4.聚合SDK设计-显示定位图层-百度地图-添加大头针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../11_抽象工厂-地图定位/05_聚合SDK设计-显示定位图层-高德地图.html">
+            
+                <a href="../11_抽象工厂-地图定位/05_聚合SDK设计-显示定位图层-高德地图.html">
+            
+                    
+                    11.5.聚合SDK设计-显示定位图层-高德地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../11_抽象工厂-地图定位/06_聚合SDK设计-显示定位图层-定位属性.html">
+            
+                <a href="../11_抽象工厂-地图定位/06_聚合SDK设计-显示定位图层-定位属性.html">
+            
+                    
+                    11.6.聚合SDK设计-显示定位图层-定位属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../11_抽象工厂-地图定位/07_聚合SDK设计-显示定位图层-自带定位-百度地图.html">
+            
+                <a href="../11_抽象工厂-地图定位/07_聚合SDK设计-显示定位图层-自带定位-百度地图.html">
+            
+                    
+                    11.7.聚合SDK设计-显示定位图层-自带定位-百度地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../11_抽象工厂-地图定位/08_聚合SDK设计-显示定位图层-自带定位-高德地图.html">
+            
+                <a href="../11_抽象工厂-地图定位/08_聚合SDK设计-显示定位图层-自带定位-高德地图.html">
+            
+                    
+                    11.8.聚合SDK设计-显示定位图层-自带定位-高德地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../11_抽象工厂-地图定位/09_聚合SDK设计-显示定位图层-解答.html">
+            
+                <a href="../11_抽象工厂-地图定位/09_聚合SDK设计-显示定位图层-解答.html">
+            
+                    
+                    11.9.聚合SDK设计-显示定位图层-解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    12.工厂模式补充+策略模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../12_工厂模式补充+策略模式/01_工厂模式-差异问题-分析问题.html">
+            
+                <a href="../12_工厂模式补充+策略模式/01_工厂模式-差异问题-分析问题.html">
+            
+                    
+                    12.1.工厂模式-差异问题-分析问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../12_工厂模式补充+策略模式/02_工厂模式-差异问题-实现功能.html">
+            
+                <a href="../12_工厂模式补充+策略模式/02_工厂模式-差异问题-实现功能.html">
+            
+                    
+                    12.2.工厂模式-差异问题-实现功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../12_工厂模式补充+策略模式/03_工厂模式-UML类图.html">
+            
+                <a href="../12_工厂模式补充+策略模式/03_工厂模式-UML类图.html">
+            
+                    
+                    12.3.工厂模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../12_工厂模式补充+策略模式/04_策略模式-基本概念.html">
+            
+                <a href="../12_工厂模式补充+策略模式/04_策略模式-基本概念.html">
+            
+                    
+                    12.4.策略模式-基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../12_工厂模式补充+策略模式/05_策略模式-原理案例.html">
+            
+                <a href="../12_工厂模式补充+策略模式/05_策略模式-原理案例.html">
+            
+                    
+                    12.5.策略模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../12_工厂模式补充+策略模式/06_策略模式-开发案例.html">
+            
+                <a href="../12_工厂模式补充+策略模式/06_策略模式-开发案例.html">
+            
+                    
+                    12.6.策略模式-开发案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../12_工厂模式补充+策略模式/07_策略模式-基本概念.html">
+            
+                <a href="../12_工厂模式补充+策略模式/07_策略模式-基本概念.html">
+            
+                    
+                    12.7.策略模式-基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../12_工厂模式补充+策略模式/08_策略模式-开发案例.html">
+            
+                <a href="../12_工厂模式补充+策略模式/08_策略模式-开发案例.html">
+            
+                    
+                    12.8.策略模式-开发案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../12_工厂模式补充+策略模式/09_解答.html">
+            
+                <a href="../12_工厂模式补充+策略模式/09_解答.html">
+            
+                    
+                    12.9.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    13.模版方法模式与观察者模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../13_模版方法模式与观察者模式/01_设计模式-模板方法模式-原理案例.html">
+            
+                <a href="../13_模版方法模式与观察者模式/01_设计模式-模板方法模式-原理案例.html">
+            
+                    
+                    13.1.设计模式-模板方法模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../13_模版方法模式与观察者模式/02_设计模式-模板方法模式-普通代码.html">
+            
+                <a href="../13_模版方法模式与观察者模式/02_设计模式-模板方法模式-普通代码.html">
+            
+                    
+                    13.2.设计模式-模板方法模式-普通代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../13_模版方法模式与观察者模式/03_设计模式-模板方法模式-开发案例.html">
+            
+                <a href="../13_模版方法模式与观察者模式/03_设计模式-模板方法模式-开发案例.html">
+            
+                    
+                    13.3.设计模式-模板方法模式-开发案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../13_模版方法模式与观察者模式/04_设计模式-模板方法模式-总结.html">
+            
+                <a href="../13_模版方法模式与观察者模式/04_设计模式-模板方法模式-总结.html">
+            
+                    
+                    13.4.设计模式-模板方法模式-总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../13_模版方法模式与观察者模式/05_设计模式-观察者模式.html">
+            
+                <a href="../13_模版方法模式与观察者模式/05_设计模式-观察者模式.html">
+            
+                    
+                    13.5.设计模式-观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    14.迭代器模式和原型模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../14_迭代器模式和原型模式/01_设计模式-迭代器模式-原理案例.html">
+            
+                <a href="../14_迭代器模式和原型模式/01_设计模式-迭代器模式-原理案例.html">
+            
+                    
+                    14.1.设计模式-迭代器模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../14_迭代器模式和原型模式/02_设计模式-迭代器模式-加强案例.html">
+            
+                <a href="../14_迭代器模式和原型模式/02_设计模式-迭代器模式-加强案例.html">
+            
+                    
+                    14.2.设计模式-迭代器模式-加强案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../14_迭代器模式和原型模式/03_设计模式原型模式-原理案例-浅度拷贝.html">
+            
+                <a href="../14_迭代器模式和原型模式/03_设计模式原型模式-原理案例-浅度拷贝.html">
+            
+                    
+                    14.3.设计模式原型模式-原理案例-浅度拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../14_迭代器模式和原型模式/04_设计模式原型模式-原理案例-深度拷贝.html">
+            
+                <a href="../14_迭代器模式和原型模式/04_设计模式原型模式-原理案例-深度拷贝.html">
+            
+                    
+                    14.4.设计模式原型模式-原理案例-深度拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../14_迭代器模式和原型模式/05_设计模式原型模式-原理案例-系统协议.html">
+            
+                <a href="../14_迭代器模式和原型模式/05_设计模式原型模式-原理案例-系统协议.html">
+            
+                    
+                    14.5.设计模式原型模式-原理案例-系统协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../14_迭代器模式和原型模式/06_设计模式原型模式-加强案例.html">
+            
+                <a href="../14_迭代器模式和原型模式/06_设计模式原型模式-加强案例.html">
+            
+                    
+                    14.6.设计模式原型模式-加强案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    15.享元模式和组合模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../15_工厂模式补充+策略模式/01_设计模式-享元模式-原理案例.html">
+            
+                <a href="../15_工厂模式补充+策略模式/01_设计模式-享元模式-原理案例.html">
+            
+                    
+                    15.1.设计模式-享元模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../15_工厂模式补充+策略模式/02_设计模式-享元模式-模式实现.html">
+            
+                <a href="../15_工厂模式补充+策略模式/02_设计模式-享元模式-模式实现.html">
+            
+                    
+                    15.2.设计模式-享元模式-模式实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../15_工厂模式补充+策略模式/03_设计模式-享元模式-UML类图与总结.html">
+            
+                <a href="../15_工厂模式补充+策略模式/03_设计模式-享元模式-UML类图与总结.html">
+            
+                    
+                    15.3.设计模式-享元模式-UML类图与总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../15_工厂模式补充+策略模式/04_设计模式-组合模式-原理分析-系统UI结构.html">
+            
+                <a href="../15_工厂模式补充+策略模式/04_设计模式-组合模式-原理分析-系统UI结构.html">
+            
+                    
+                    15.4.设计模式-组合模式-原理分析-系统UI结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../15_工厂模式补充+策略模式/05_设计模式-组合模式-原始案例.html">
+            
+                <a href="../15_工厂模式补充+策略模式/05_设计模式-组合模式-原始案例.html">
+            
+                    
+                    15.5.设计模式-组合模式-原始案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../15_工厂模式补充+策略模式/06_设计模式-组合模式-改进案例.html">
+            
+                <a href="../15_工厂模式补充+策略模式/06_设计模式-组合模式-改进案例.html">
+            
+                    
+                    15.6.设计模式-组合模式-改进案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../15_工厂模式补充+策略模式/07_设计模式-组合模式-文件案例.html">
+            
+                <a href="../15_工厂模式补充+策略模式/07_设计模式-组合模式-文件案例.html">
+            
+                    
+                    15.7.设计模式-组合模式-文件案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="../15_工厂模式补充+策略模式/08_设计模式-组合模式-UML类图.html">
+            
+                <a href="../15_工厂模式补充+策略模式/08_设计模式-组合模式-UML类图.html">
+            
+                    
+                    15.8.设计模式-组合模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="../15_工厂模式补充+策略模式/09_总结与解答.html">
+            
+                <a href="../15_工厂模式补充+策略模式/09_总结与解答.html">
+            
+                    
+                    15.9.总结与解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    16.备忘录模式和状态模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../16_备忘录模式和状态模式/01_设计模式-备忘录模式-原理案例.html">
+            
+                <a href="../16_备忘录模式和状态模式/01_设计模式-备忘录模式-原理案例.html">
+            
+                    
+                    16.1.设计模式-备忘录模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../16_备忘录模式和状态模式/02_设计模式-备忘录模式-优化案例-命令模式实现.html">
+            
+                <a href="../16_备忘录模式和状态模式/02_设计模式-备忘录模式-优化案例-命令模式实现.html">
+            
+                    
+                    16.2.设计模式-备忘录模式-优化案例-命令模式实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../16_备忘录模式和状态模式/03_设计模式-备忘录模式-优化案例-备忘录实现.html">
+            
+                <a href="../16_备忘录模式和状态模式/03_设计模式-备忘录模式-优化案例-备忘录实现.html">
+            
+                    
+                    16.3.设计模式-备忘录模式-优化案例-备忘录实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../16_备忘录模式和状态模式/04_设计模式-备忘录模式-优化案例-模式变种.html">
+            
+                <a href="../16_备忘录模式和状态模式/04_设计模式-备忘录模式-优化案例-模式变种.html">
+            
+                    
+                    16.4.设计模式-备忘录模式-优化案例-模式变种
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../16_备忘录模式和状态模式/05_设计模式-备忘录模式-UML类图.html">
+            
+                <a href="../16_备忘录模式和状态模式/05_设计模式-备忘录模式-UML类图.html">
+            
+                    
+                    16.5.设计模式-备忘录模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../16_备忘录模式和状态模式/06_设计模式-状态模式-普通案例.html">
+            
+                <a href="../16_备忘录模式和状态模式/06_设计模式-状态模式-普通案例.html">
+            
+                    
+                    16.6.设计模式-状态模式-普通案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../16_备忘录模式和状态模式/07_设计模式-状态模式-模式案例.html">
+            
+                <a href="../16_备忘录模式和状态模式/07_设计模式-状态模式-模式案例.html">
+            
+                    
+                    16.7.设计模式-状态模式-模式案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.8" data-path="../16_备忘录模式和状态模式/08_设计模式-状态模式-UML类图结构.html">
+            
+                <a href="../16_备忘录模式和状态模式/08_设计模式-状态模式-UML类图结构.html">
+            
+                    
+                    16.8.设计模式-状态模式-UML类图结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.9" data-path="../16_备忘录模式和状态模式/09_解答.html">
+            
+                <a href="../16_备忘录模式和状态模式/09_解答.html">
+            
+                    
+                    16.9.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    17.设计模式-第14讲-责任链模式和解析器模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/01_设计模式-责任链模式-原理案例-简单角色.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/01_设计模式-责任链模式-原理案例-简单角色.html">
+            
+                    
+                    17.1.设计模式-责任链模式-原理案例-简单角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/02_设计模式-责任链模式-原理案例-复杂角色.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/02_设计模式-责任链模式-原理案例-复杂角色.html">
+            
+                    
+                    17.2.设计模式-责任链模式-原理案例-复杂角色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/03_设计模式-责任链模式-加强理解.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/03_设计模式-责任链模式-加强理解.html">
+            
+                    
+                    17.3.设计模式-责任链模式-加强理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/04_设计模式-解析器模式-概念分析.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/04_设计模式-解析器模式-概念分析.html">
+            
+                    
+                    17.4.设计模式-解析器模式-概念分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/05_设计模式-解析器模式-原始案例.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/05_设计模式-解析器模式-原始案例.html">
+            
+                    
+                    17.5.设计模式-解析器模式-原始案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/06_设计模式-解析器模式-模式结构.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/06_设计模式-解析器模式-模式结构.html">
+            
+                    
+                    17.6.设计模式-解析器模式-模式结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/07_设计模式-解析器模式-功能实现.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/07_设计模式-解析器模式-功能实现.html">
+            
+                    
+                    17.7.设计模式-解析器模式-功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.8" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/08_解析器模式-扩展功能.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/08_解析器模式-扩展功能.html">
+            
+                    
+                    17.8.解析器模式-扩展功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.9" data-path="../17_设计模式-第14讲-责任链模式和解析器模式/09_解答分享.html">
+            
+                <a href="../17_设计模式-第14讲-责任链模式和解析器模式/09_解答分享.html">
+            
+                    
+                    17.9.解答分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" >
+            
+                <span>
+            
+                    
+                    18.桥接模式和访问者模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../18_桥接模式和访问者模式/01_桥接模式-原理案例.html">
+            
+                <a href="../18_桥接模式和访问者模式/01_桥接模式-原理案例.html">
+            
+                    
+                    18.1.桥接模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../18_桥接模式和访问者模式/02_桥接模式-加强理解.html">
+            
+                <a href="../18_桥接模式和访问者模式/02_桥接模式-加强理解.html">
+            
+                    
+                    18.2.桥接模式-加强理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../18_桥接模式和访问者模式/03_桥接模式-开发案例.html">
+            
+                <a href="../18_桥接模式和访问者模式/03_桥接模式-开发案例.html">
+            
+                    
+                    18.3.桥接模式-开发案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4" data-path="../18_桥接模式和访问者模式/04_桥接模式-UML类图.html">
+            
+                <a href="../18_桥接模式和访问者模式/04_桥接模式-UML类图.html">
+            
+                    
+                    18.4.桥接模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5" data-path="../18_桥接模式和访问者模式/05_访问者模式-原理案例.html">
+            
+                <a href="../18_桥接模式和访问者模式/05_访问者模式-原理案例.html">
+            
+                    
+                    18.5.访问者模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6" data-path="../18_桥接模式和访问者模式/06_访问者模式-UML类图.html">
+            
+                <a href="../18_桥接模式和访问者模式/06_访问者模式-UML类图.html">
+            
+                    
+                    18.6.访问者模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.7" data-path="../18_桥接模式和访问者模式/07_解答.html">
+            
+                <a href="../18_桥接模式和访问者模式/07_解答.html">
+            
+                    
+                    18.7.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" >
+            
+                <span>
+            
+                    
+                    19.外观模式和中介者模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../19_外观模式和中介者模式/01_外观模式-案例分析.html">
+            
+                <a href="../19_外观模式和中介者模式/01_外观模式-案例分析.html">
+            
+                    
+                    19.1.外观模式-案例分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" data-path="../19_外观模式和中介者模式/02_外观模式-UML类图.html">
+            
+                <a href="../19_外观模式和中介者模式/02_外观模式-UML类图.html">
+            
+                    
+                    19.2.外观模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3" data-path="../19_外观模式和中介者模式/03_中介者模式-原理案例.html">
+            
+                <a href="../19_外观模式和中介者模式/03_中介者模式-原理案例.html">
+            
+                    
+                    19.3.中介者模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.4" data-path="../19_外观模式和中介者模式/04_中介者模式-加强案例.html">
+            
+                <a href="../19_外观模式和中介者模式/04_中介者模式-加强案例.html">
+            
+                    
+                    19.4.中介者模式-加强案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5" data-path="../19_外观模式和中介者模式/05_中介者模式-UML类图.html">
+            
+                <a href="../19_外观模式和中介者模式/05_中介者模式-UML类图.html">
+            
+                    
+                    19.5.中介者模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6" data-path="../19_外观模式和中介者模式/06_解答.html">
+            
+                <a href="../19_外观模式和中介者模式/06_解答.html">
+            
+                    
+                    19.6.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" >
+            
+                <span>
+            
+                    
+                    20.代理模式和装饰模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../20_代理模式和装饰模式/01_代理模式-原理案例.html">
+            
+                <a href="../20_代理模式和装饰模式/01_代理模式-原理案例.html">
+            
+                    
+                    20.1 代理模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" data-path="../20_代理模式和装饰模式/02_代理模式-加强案例-普通写法.html">
+            
+                <a href="../20_代理模式和装饰模式/02_代理模式-加强案例-普通写法.html">
+            
+                    
+                    20.2 代理模式-加强案例-普通写法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3" data-path="../20_代理模式和装饰模式/03_代理模式-加强案例-模式优化.html">
+            
+                <a href="../20_代理模式和装饰模式/03_代理模式-加强案例-模式优化.html">
+            
+                    
+                    20.3 代理模式-加强案例-模式优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.4" data-path="../20_代理模式和装饰模式/04_代理模式-加强案例-模式优化.html">
+            
+                <a href="../20_代理模式和装饰模式/04_代理模式-加强案例-模式优化.html">
+            
+                    
+                    20.4 代理模式-加强案例-模式优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.5" data-path="../20_代理模式和装饰模式/05_装饰模式-原理案例.html">
+            
+                <a href="../20_代理模式和装饰模式/05_装饰模式-原理案例.html">
+            
+                    
+                    20.5 装饰模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6" data-path="../20_代理模式和装饰模式/06_数据库框架介绍+解答.html">
+            
+                <a href="../20_代理模式和装饰模式/06_数据库框架介绍+解答.html">
+            
+                    
+                    20.6 数据库框架介绍+解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" >
+            
+                <span>
+            
+                    
+                    21.数据库框架-第1讲-数据库连接-静态构建表
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../21_数据库框架-第1讲-数据库连接-静态构建表/01_框架设计-数据库设计-连接数据库-上.html">
+            
+                <a href="../21_数据库框架-第1讲-数据库连接-静态构建表/01_框架设计-数据库设计-连接数据库-上.html">
+            
+                    
+                    21.1 框架设计-数据库设计-连接数据库-上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.2" data-path="../21_数据库框架-第1讲-数据库连接-静态构建表/02_框架设计-数据库设计-连接数据库-下.html">
+            
+                <a href="../21_数据库框架-第1讲-数据库连接-静态构建表/02_框架设计-数据库设计-连接数据库-下.html">
+            
+                    
+                    21.2 框架设计-数据库设计-连接数据库-下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22.3" data-path="../21_数据库框架-第1讲-数据库连接-静态构建表/03_解答.html">
+            
+                <a href="../21_数据库框架-第1讲-数据库连接-静态构建表/03_解答.html">
+            
+                    
+                    21.3 解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" >
+            
+                <span>
+            
+                    
+                    22.数据库框架-第2讲-动态表构建-构建者模式+解析器模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.1" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/01_核心-构建者模式-角色分析.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/01_核心-构建者模式-角色分析.html">
+            
+                    
+                    22.1.核心-构建者模式-角色分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.2" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/02_辅助-解析器模式-原理分析.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/02_辅助-解析器模式-原理分析.html">
+            
+                    
+                    22.2.辅助-解析器模式-原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.3" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/03_辅助-解析器模式-角色分析+学习.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/03_辅助-解析器模式-角色分析+学习.html">
+            
+                    
+                    22.3.辅助-解析器模式-角色分析+学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.4" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/04_桥接模式-UML类图.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/04_桥接模式-UML类图.html">
+            
+                    
+                    22.4.桥接模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.5" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/05_访问者模式-原理案例.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/05_访问者模式-原理案例.html">
+            
+                    
+                    22.5.访问者模式-原理案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.6" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/06_访问者模式-UML类图.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/06_访问者模式-UML类图.html">
+            
+                    
+                    22.6.访问者模式-UML类图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.7" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/07_学习方法.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/07_学习方法.html">
+            
+                    
+                    22.7.学习方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.8" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/08_核心-构建者模式-角色定义.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/08_核心-构建者模式-角色定义.html">
+            
+                    
+                    22.8.核心-构建者模式-角色定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.9" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/09_核心-构建者模式-具体产品实现.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/09_核心-构建者模式-具体产品实现.html">
+            
+                    
+                    22.9.核心-构建者模式-具体产品实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.10" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/10_核心-构建者模式-具体产品实现.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/10_核心-构建者模式-具体产品实现.html">
+            
+                    
+                    22.10.核心-构建者模式-具体产品实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.11" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/11_核心-构建者模式-具体产品实现.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/11_核心-构建者模式-具体产品实现.html">
+            
+                    
+                    22.11.核心-构建者模式-具体产品实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.12" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/12_核心-构建者模式-具体产品实现.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/12_核心-构建者模式-具体产品实现.html">
+            
+                    
+                    22.12.核心-构建者模式-具体产品实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.13" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/13_核心-构建者模式-具体产品实现.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/13_核心-构建者模式-具体产品实现.html">
+            
+                    
+                    22.13.核心-构建者模式-具体产品实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.14" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/14_核心-构建者模式-具体产品实现.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/14_核心-构建者模式-具体产品实现.html">
+            
+                    
+                    22.14.核心-构建者模式-具体产品实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.15" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/15_核心-构建者模式-构建者.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/15_核心-构建者模式-构建者.html">
+            
+                    
+                    22.15.核心-构建者模式-构建者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.16" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/16_核心-构建者模式-组装者.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/16_核心-构建者模式-组装者.html">
+            
+                    
+                    22.16.核心-构建者模式-组装者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.17" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/17_核心-解析器模式-实现与解决bug.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/17_核心-解析器模式-实现与解决bug.html">
+            
+                    
+                    22.17.核心-解析器模式-实现与解决bug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23.18" data-path="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/18_解答.html">
+            
+                <a href="../22_数据库框架-第2讲-动态表构建-构建者模式+解析器模式/18_解答.html">
+            
+                    
+                    22.18.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" >
+            
+                <span>
+            
+                    
+                    23.数据库框架-第3讲-构建者模式-动态创建表
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="../23_数据库框架-第3讲-构建者模式-动态创建表/01_动态表构建-SQL语句构建流程.html">
+            
+                <a href="../23_数据库框架-第3讲-构建者模式-动态创建表/01_动态表构建-SQL语句构建流程.html">
+            
+                    
+                    23.1.动态表构建-SQL语句构建流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="../23_数据库框架-第3讲-构建者模式-动态创建表/02_动态表构建-功能分析.html">
+            
+                <a href="../23_数据库框架-第3讲-构建者模式-动态创建表/02_动态表构建-功能分析.html">
+            
+                    
+                    23.2.动态表构建-功能分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" data-path="../23_数据库框架-第3讲-构建者模式-动态创建表/03_动态表构建-SQL语句执行流程.html">
+            
+                <a href="../23_数据库框架-第3讲-构建者模式-动态创建表/03_动态表构建-SQL语句执行流程.html">
+            
+                    
+                    23.3.动态表构建-SQL语句执行流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" data-path="../23_数据库框架-第3讲-构建者模式-动态创建表/04_动态表构建-绑定数据.html">
+            
+                <a href="../23_数据库框架-第3讲-构建者模式-动态创建表/04_动态表构建-绑定数据.html">
+            
+                    
+                    23.4.动态表构建-绑定数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.5" data-path="../23_数据库框架-第3讲-构建者模式-动态创建表/05_动态表构建-执行SQL.html">
+            
+                <a href="../23_数据库框架-第3讲-构建者模式-动态创建表/05_动态表构建-执行SQL.html">
+            
+                    
+                    23.5.动态表构建-执行SQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.6" data-path="../23_数据库框架-第3讲-构建者模式-动态创建表/06_解答.html">
+            
+                <a href="../23_数据库框架-第3讲-构建者模式-动态创建表/06_解答.html">
+            
+                    
+                    23.6.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" >
+            
+                <span>
+            
+                    
+                    24.数据库框架-第4讲-动态操作表-插入数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.1" data-path="01_插入数据-流程分析.html">
+            
+                <a href="01_插入数据-流程分析.html">
+            
+                    
+                    24.1.插入数据-流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.2" data-path="02_插入数据-运算符重载-运算符定义.html">
+            
+                <a href="02_插入数据-运算符重载-运算符定义.html">
+            
+                    
+                    24.2.插入数据-运算符重载-运算符定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.3" data-path="03_插入数据-运算符重载-Setter初始化.html">
+            
+                <a href="03_插入数据-运算符重载-Setter初始化.html">
+            
+                    
+                    24.3.插入数据-运算符重载-Setter初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.4" data-path="04_插入数据-运算符重载-拼接.html">
+            
+                <a href="04_插入数据-运算符重载-拼接.html">
+            
+                    
+                    24.4.插入数据-运算符重载-拼接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.5" data-path="05_插入数据-QueryType-insert.html">
+            
+                <a href="05_插入数据-QueryType-insert.html">
+            
+                    
+                    24.5.插入数据-QueryType-insert
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.6" data-path="06_插入数据-运算符函数.html">
+            
+                <a href="06_插入数据-运算符函数.html">
+            
+                    
+                    24.6.插入数据-运算符函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.25.7" data-path="07_插入数据-Optional自定义可选类型.html">
+            
+                <a href="07_插入数据-Optional自定义可选类型.html">
+            
+                    
+                    24.7.插入数据-Optional自定义可选类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.8" data-path="08_插入数据-自定义可选类型-添加约束条件.html">
+            
+                <a href="08_插入数据-自定义可选类型-添加约束条件.html">
+            
+                    
+                    24.8.插入数据-自定义可选类型-添加约束条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.9" data-path="09_插入数据-自定义可选类型-TableBui.html">
+            
+                <a href="09_插入数据-自定义可选类型-TableBui.html">
+            
+                    
+                    24.9.插入数据-自定义可选类型-TableBui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25.10" data-path="10_解答.html">
+            
+                <a href="10_解答.html">
+            
+                    
+                    24.10.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" >
+            
+                <span>
+            
+                    
+                    25.数据库框架-第5讲-动态操作表-修改数据+删除数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.1" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/01_数据库框架-更新数据-更新所有-流程分析.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/01_数据库框架-更新数据-更新所有-流程分析.html">
+            
+                    
+                    25.1.数据库框架-更新数据-更新所有-流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.2" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/02_数据库框架-更新数据-更新所有-功能实现.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/02_数据库框架-更新数据-更新所有-功能实现.html">
+            
+                    
+                    25.2.数据库框架-更新数据-更新所有-功能实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.3" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/03_数据库框架-更新数据-条件更新.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/03_数据库框架-更新数据-条件更新.html">
+            
+                    
+                    25.3.数据库框架-更新数据-条件更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.4" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/04_数据库框架-更新数据-内容替换.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/04_数据库框架-更新数据-内容替换.html">
+            
+                    
+                    25.4.数据库框架-更新数据-内容替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.5" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/05_数据库框架-删除数据-删除所有.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/05_数据库框架-删除数据-删除所有.html">
+            
+                    
+                    25.5.数据库框架-删除数据-删除所有
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.6" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/06_数据库框架-删除数据-条件删除.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/06_数据库框架-删除数据-条件删除.html">
+            
+                    
+                    25.6.数据库框架-删除数据-条件删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26.7" data-path="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/07_解答.html">
+            
+                <a href="../25_数据库框架-第5讲-动态操作表-修改数据+删除数据/07_解答.html">
+            
+                    
+                    25.7.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" >
+            
+                <span>
+            
+                    
+                    26.框架设计-数据库框架-第6讲-迭代器模式-查询数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.1" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/01_数据库框架-查询数据-查询所有-流程分析.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/01_数据库框架-查询数据-查询所有-流程分析.html">
+            
+                    
+                    26.1.数据库框架-查询数据-查询所有-流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.2" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/02_数据库框架-查询数据-迭代器模式.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/02_数据库框架-查询数据-迭代器模式.html">
+            
+                    
+                    26.2.数据库框架-查询数据-迭代器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.3" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/03_数据库框架-查询数据-遍历数据-流程分析.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/03_数据库框架-查询数据-遍历数据-流程分析.html">
+            
+                    
+                    26.3.数据库框架-查询数据-遍历数据-流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.4" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/04_数据库框架-查询数据-查询所有-框架搭建.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/04_数据库框架-查询数据-查询所有-框架搭建.html">
+            
+                    
+                    26.4.数据库框架-查询数据-查询所有-框架搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.5" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/05_数据库框架-查询数据-字段查询-框架搭建.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/05_数据库框架-查询数据-字段查询-框架搭建.html">
+            
+                    
+                    26.5.数据库框架-查询数据-字段查询-框架搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.6" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/06_数据库框架-查询数据-星号查询-框架搭建.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/06_数据库框架-查询数据-星号查询-框架搭建.html">
+            
+                    
+                    26.6.数据库框架-查询数据-星号查询-框架搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27.7" data-path="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/07_解答.html">
+            
+                <a href="../26_框架设计-数据库框架-第6讲-迭代器模式-查询数据/07_解答.html">
+            
+                    
+                    26.7.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" >
+            
+                <span>
+            
+                    
+                    27.框架设计-数据库框架-第7讲-动态操作表-查询子句
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.28.1" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/01_数据库框架-关联查询.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/01_数据库框架-关联查询.html">
+            
+                    
+                    27.1.数据库框架-关联查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.2" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/02_数据库框架-查询子句-where查询.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/02_数据库框架-查询子句-where查询.html">
+            
+                    
+                    27.2.数据库框架-查询子句-where查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.3" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/03_数据库框架-查询子句-order排序.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/03_数据库框架-查询子句-order排序.html">
+            
+                    
+                    27.3.数据库框架-查询子句-order排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.4" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/04_数据库框架-查询子句-limit查询.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/04_数据库框架-查询子句-limit查询.html">
+            
+                    
+                    27.4.数据库框架-查询子句-limit查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.5" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/05_数据库框架-查询子句-limit查询-只查询一条数据.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/05_数据库框架-查询子句-limit查询-只查询一条数据.html">
+            
+                    
+                    27.5.数据库框架-查询子句-limit查询-只查询一条数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.6" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/06_数据库框架-查询子句-contains查询.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/06_数据库框架-查询子句-contains查询.html">
+            
+                    
+                    27.6.数据库框架-查询子句-contains查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.7" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/07_数据库框架-查询子句-like模糊查询.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/07_数据库框架-查询子句-like模糊查询.html">
+            
+                    
+                    27.7.数据库框架-查询子句-like模糊查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.8" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/08_数据库框架-查询子句-运算符重载-查询条件.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/08_数据库框架-查询子句-运算符重载-查询条件.html">
+            
+                    
+                    27.8.数据库框架-查询子句-运算符重载-查询条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.9" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/09_数据库框架-查询子句-大小写.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/09_数据库框架-查询子句-大小写.html">
+            
+                    
+                    27.9.数据库框架-查询子句-大小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.10" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/10_数据库框架-查询子句-Table表-where.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/10_数据库框架-查询子句-Table表-where.html">
+            
+                    
+                    27.10.数据库框架-查询子句-Table表-where
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.11" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/11_数据库框架-查询子句-group分组.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/11_数据库框架-查询子句-group分组.html">
+            
+                    
+                    27.11.数据库框架-查询子句-group分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.12" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/12_数据库框架-查询函数-count.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/12_数据库框架-查询函数-count.html">
+            
+                    
+                    27.12.数据库框架-查询函数-count
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.13" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/13_数据库框架-查询函数-count-指定条件.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/13_数据库框架-查询函数-count-指定条件.html">
+            
+                    
+                    27.13.数据库框架-查询函数-count-指定条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.14" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/14_数据库框架-查询函数-max与min.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/14_数据库框架-查询函数-max与min.html">
+            
+                    
+                    27.14.数据库框架-查询函数-max与min
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.15" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/15_数据库框架-查询函数-avg与sum与total-分析.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/15_数据库框架-查询函数-avg与sum与total-分析.html">
+            
+                    
+                    27.15.数据库框架-查询函数-avg与sum与total-分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.16" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/16_数据库框架-查询函数-avg与sum与total-实现.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/16_数据库框架-查询函数-avg与sum与total-实现.html">
+            
+                    
+                    27.16.数据库框架-查询函数-avg与sum与total-实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.17" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/17_数据库框架-查询函数-distinct分类个数.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/17_数据库框架-查询函数-distinct分类个数.html">
+            
+                    
+                    27.17.数据库框架-查询函数-distinct分类个数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28.18" data-path="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/18_解答.html">
+            
+                <a href="../27_框架设计-数据库框架-第7讲-动态操作表-查询子句/18_解答.html">
+            
+                    
+                    27.18.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" >
+            
+                <span>
+            
+                    
+                    28.框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.29.1" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/01_数据库框架-表管理-重命名表名.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/01_数据库框架-表管理-重命名表名.html">
+            
+                    
+                    28.1.数据库框架-表管理-重命名表名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.2" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/02_数据库框架-表管理-添加表字段.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/02_数据库框架-表管理-添加表字段.html">
+            
+                    
+                    28.2.数据库框架-表管理-添加表字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.3" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/03_数据库框架-表管理-新建虚拟表.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/03_数据库框架-表管理-新建虚拟表.html">
+            
+                    
+                    28.3.数据库框架-表管理-新建虚拟表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.4" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/04_数据库框架-约束条件-添加主键.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/04_数据库框架-约束条件-添加主键.html">
+            
+                    
+                    28.4.数据库框架-约束条件-添加主键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.5" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/05_好消息.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/05_好消息.html">
+            
+                    
+                    28.5.好消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.6" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/06_数据库框架-事务处理.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/06_数据库框架-事务处理.html">
+            
+                    
+                    28.6.数据库框架-事务处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29.7" data-path="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/07_解答.html">
+            
+                <a href="../28_框架设计-数据库框架-第8讲-动态操作表-约束条件+事务处理/07_解答.html">
+            
+                    
+                    28.7.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" >
+            
+                <span>
+            
+                    
+                    29.框架设计-RAC框架-第1讲-架构模式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.30.1" data-path="../29_框架设计-RAC框架-第1讲-架构模式/01_课前简介.html">
+            
+                <a href="../29_框架设计-RAC框架-第1讲-架构模式/01_课前简介.html">
+            
+                    
+                    29.1.课前简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30.2" data-path="../29_框架设计-RAC框架-第1讲-架构模式/02_MVC解重.html">
+            
+                <a href="../29_框架设计-RAC框架-第1讲-架构模式/02_MVC解重.html">
+            
+                    
+                    29.2.MVC解重
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30.3" data-path="../29_框架设计-RAC框架-第1讲-架构模式/03_MVP解耦.html">
+            
+                <a href="../29_框架设计-RAC框架-第1讲-架构模式/03_MVP解耦.html">
+            
+                    
+                    29.3.MVP解耦
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30.4" data-path="../29_框架设计-RAC框架-第1讲-架构模式/04_MVVM架构.html">
+            
+                <a href="../29_框架设计-RAC框架-第1讲-架构模式/04_MVVM架构.html">
+            
+                    
+                    29.4.MVVM架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30.5" data-path="../29_框架设计-RAC框架-第1讲-架构模式/05_MVVM拓展延伸.html">
+            
+                <a href="../29_框架设计-RAC框架-第1讲-架构模式/05_MVVM拓展延伸.html">
+            
+                    
+                    29.5.MVVM拓展延伸
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30.6" data-path="../29_框架设计-RAC框架-第1讲-架构模式/06_课后总结注意.html">
+            
+                <a href="../29_框架设计-RAC框架-第1讲-架构模式/06_课后总结注意.html">
+            
+                    
+                    29.6.课后总结注意
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" >
+            
+                <span>
+            
+                    
+                    30.框架设计-RAC框架-第2讲-RAC核心底层
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.31.1" data-path="../30_框架设计-RAC框架-第2讲-RAC核心底层/01_课前简介.html">
+            
+                <a href="../30_框架设计-RAC框架-第2讲-RAC核心底层/01_课前简介.html">
+            
+                    
+                    29.1.课前简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31.2" data-path="../30_框架设计-RAC框架-第2讲-RAC核心底层/02_RAC初探.html">
+            
+                <a href="../30_框架设计-RAC框架-第2讲-RAC核心底层/02_RAC初探.html">
+            
+                    
+                    29.2.RAC初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31.3" data-path="../30_框架设计-RAC框架-第2讲-RAC核心底层/03_RAC初级使用.html">
+            
+                <a href="../30_框架设计-RAC框架-第2讲-RAC核心底层/03_RAC初级使用.html">
+            
+                    
+                    29.3.RAC初级使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31.4" data-path="../30_框架设计-RAC框架-第2讲-RAC核心底层/04_RAC高阶函数.html">
+            
+                <a href="../30_框架设计-RAC框架-第2讲-RAC核心底层/04_RAC高阶函数.html">
+            
+                    
+                    29.4.RAC高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31.5" data-path="../30_框架设计-RAC框架-第2讲-RAC核心底层/05_RAC流程分析.html">
+            
+                <a href="../30_框架设计-RAC框架-第2讲-RAC核心底层/05_RAC流程分析.html">
+            
+                    
+                    29.5.RAC流程分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31.6" data-path="../30_框架设计-RAC框架-第2讲-RAC核心底层/06_RAC课后总结.html">
+            
+                <a href="../30_框架设计-RAC框架-第2讲-RAC核心底层/06_RAC课后总结.html">
+            
+                    
+                    29.6.RAC课后总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" >
+            
+                <span>
+            
+                    
+                    31.框架设计-RAC框架-第3讲-RAC核心底层（中）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.32.1" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/01_课前简介.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/01_课前简介.html">
+            
+                    
+                    31.1.课前简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.2" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/02_RAC源码分析.m d">
+            
+                <span>
+            
+                    
+                    31.2.RAC源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.3" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/03_RACPassthroug和RACSchedul.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/03_RACPassthroug和RACSchedul.html">
+            
+                    
+                    31.3.RACPassthroug和RACSchedul
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.4" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/04_RACDisposable.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/04_RACDisposable.html">
+            
+                    
+                    31.4.RACDisposable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.5" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/05_RACSubject.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/05_RACSubject.html">
+            
+                    
+                    31.5.RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.6" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/06_课程总结.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/06_课程总结.html">
+            
+                    
+                    31.6.课程总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.7" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/07_点语法知识扩展.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/07_点语法知识扩展.html">
+            
+                    
+                    31.7.点语法知识扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.8" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/08_RACSubject分析.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/08_RACSubject分析.html">
+            
+                    
+                    31.8.RACSubject分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32.9" data-path="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/09_RACMutacast分析.html">
+            
+                <a href="../31_框架设计-RAC框架-第3讲-RAC核心底层（中）/09_RACMutacast分析.html">
+            
+                    
+                    31.9.RACMutacast分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" >
+            
+                <span>
+            
+                    
+                    32.框架设计-RAC框架-第4讲-RAC核心底层（下）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.33.1" data-path="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/01_课前简介.html">
+            
+                <a href="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/01_课前简介.html">
+            
+                    
+                    32.1.课前简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33.2" data-path="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/02_RAC宏定义.html">
+            
+                <a href="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/02_RAC宏定义.html">
+            
+                    
+                    32.2.RAC宏定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33.3" data-path="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/03_weakify和strongify的作用.html">
+            
+                <a href="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/03_weakify和strongify的作用.html">
+            
+                    
+                    32.3.weakify和strongify的作用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33.4" data-path="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/04_RACComand流程.html">
+            
+                <a href="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/04_RACComand流程.html">
+            
+                    
+                    32.4.RACComand流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33.5" data-path="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/05_RACCommand原理分析.html">
+            
+                <a href="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/05_RACCommand原理分析.html">
+            
+                    
+                    32.5.RACCommand原理分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33.6" data-path="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/06_RAC总结.html">
+            
+                <a href="../32_框架设计-RAC框架-第4讲-RAC核心底层（下）/06_RAC总结.html">
+            
+                    
+                    32.6.RAC总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" >
+            
+                <span>
+            
+                    
+                    33.框架设计-RAC框架-第5讲-RxSwift（上）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.34.1" data-path="../33_框架设计-RAC框架-第5讲-RxSwift（上）/01_课前简介.html">
+            
+                <a href="../33_框架设计-RAC框架-第5讲-RxSwift（上）/01_课前简介.html">
+            
+                    
+                    33.1.课前简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.2" data-path="../33_框架设计-RAC框架-第5讲-RxSwift（上）/02_RAC内存管理补充.html">
+            
+                <a href="../33_框架设计-RAC框架-第5讲-RxSwift（上）/02_RAC内存管理补充.html">
+            
+                    
+                    33.2.RAC内存管理补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.3" data-path="../33_框架设计-RAC框架-第5讲-RxSwift（上）/03_swift基础.html">
+            
+                <a href="../33_框架设计-RAC框架-第5讲-RxSwift（上）/03_swift基础.html">
+            
+                    
+                    33.3.swift基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.4" data-path="../33_框架设计-RAC框架-第5讲-RxSwift（上）/04_RxSwift初体验.html">
+            
+                <a href="../33_框架设计-RAC框架-第5讲-RxSwift（上）/04_RxSwift初体验.html">
+            
+                    
+                    33.4.RxSwift初体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.5" data-path="../33_框架设计-RAC框架-第5讲-RxSwift（上）/05_RxSwift浅出.html">
+            
+                <a href="../33_框架设计-RAC框架-第5讲-RxSwift（上）/05_RxSwift浅出.html">
+            
+                    
+                    33.5.RxSwift浅出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34.6" data-path="../33_框架设计-RAC框架-第5讲-RxSwift（上）/06_subject补充.html">
+            
+                <a href="../33_框架设计-RAC框架-第5讲-RxSwift（上）/06_subject补充.html">
+            
+                    
+                    33.6.subject补充
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" >
+            
+                <span>
+            
+                    
+                    34.框架设计-RAC框架-第6讲-RxSwift（下）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.35.1" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/01_课前简介.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/01_课前简介.html">
+            
+                    
+                    34.1.课前简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35.2" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/02_RxSwift应用上.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/02_RxSwift应用上.html">
+            
+                    
+                    34.2.RxSwift应用上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35.3" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/03_RxSwift应用下.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/03_RxSwift应用下.html">
+            
+                    
+                    34.3.RxSwift应用下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35.4" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/04_RxSwift进阶.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/04_RxSwift进阶.html">
+            
+                    
+                    34.4.RxSwift进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35.5" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/05_RxDataSource.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/05_RxDataSource.html">
+            
+                    
+                    34.5.RxDataSource
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35.6" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/06_RxSwift网络封装.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/06_RxSwift网络封装.html">
+            
+                    
+                    34.6.RxSwift网络封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35.7" data-path="../34_框架设计-RAC框架-第6讲-RxSwift（下）/07_RxSwift数据UI双向绑定.html">
+            
+                <a href="../34_框架设计-RAC框架-第6讲-RxSwift（下）/07_RxSwift数据UI双向绑定.html">
+            
+                    
+                    34.7.RxSwift数据UI双向绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" >
+            
+                <span>
+            
+                    
+                    35.框架设计-SDWebImage框架-第1讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.36.1" data-path="../35_框架设计-SDWebImage框架-第1讲/01_SDWebImage-1.0版本-模式分析.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/01_SDWebImage-1.0版本-模式分析.html">
+            
+                    
+                    35.1.SDWebImage-1.0版本-模式分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.2" data-path="../35_框架设计-SDWebImage框架-第1讲/02_SDWebImage-1.0版本-具体实现.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/02_SDWebImage-1.0版本-具体实现.html">
+            
+                    
+                    35.2.SDWebImage-1.0版本-具体实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.3" data-path="../35_框架设计-SDWebImage框架-第1讲/03_SDWebImage-2.0版本-优化分析.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/03_SDWebImage-2.0版本-优化分析.html">
+            
+                    
+                    35.3.SDWebImage-2.0版本-优化分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.4" data-path="../35_框架设计-SDWebImage框架-第1讲/04_SDWebImage-2.1版本-优化分析.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/04_SDWebImage-2.1版本-优化分析.html">
+            
+                    
+                    35.4.SDWebImage-2.1版本-优化分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.5" data-path="../35_框架设计-SDWebImage框架-第1讲/05_SDWebImage-2.2版本-优化分析.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/05_SDWebImage-2.2版本-优化分析.html">
+            
+                    
+                    35.5.SDWebImage-2.2版本-优化分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.6" data-path="../35_框架设计-SDWebImage框架-第1讲/06_SDWebImage-2.3版本-优化分析.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/06_SDWebImage-2.3版本-优化分析.html">
+            
+                    
+                    35.6.SDWebImage-2.3版本-优化分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.7" data-path="../35_框架设计-SDWebImage框架-第1讲/07_解答与扩展.html">
+            
+                <a href="../35_框架设计-SDWebImage框架-第1讲/07_解答与扩展.html">
+            
+                    
+                    35.7.解答与扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37" >
+            
+                <span>
+            
+                    
+                    36.框架设计-SDWebImage框架-第2讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.37.1" data-path="../36_框架设计-SDWebImage框架-第2讲/01_SDWebImage-2.4版本.html">
+            
+                <a href="../36_框架设计-SDWebImage框架-第2讲/01_SDWebImage-2.4版本.html">
+            
+                    
+                    36.1.SDWebImage-2.4版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.2" data-path="../36_框架设计-SDWebImage框架-第2讲/02_SDWebImage-2.5版本.html">
+            
+                <a href="../36_框架设计-SDWebImage框架-第2讲/02_SDWebImage-2.5版本.html">
+            
+                    
+                    36.2.SDWebImage-2.5版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.3" data-path="../36_框架设计-SDWebImage框架-第2讲/03_SDWebImage-2.6版本.html">
+            
+                <a href="../36_框架设计-SDWebImage框架-第2讲/03_SDWebImage-2.6版本.html">
+            
+                    
+                    36.3.SDWebImage-2.6版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.4" data-path="../36_框架设计-SDWebImage框架-第2讲/04_SDWebImage-2.7版本.html">
+            
+                <a href="../36_框架设计-SDWebImage框架-第2讲/04_SDWebImage-2.7版本.html">
+            
+                    
+                    36.4.SDWebImage-2.7版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.37.5" data-path="../36_框架设计-SDWebImage框架-第2讲/05_SDWebImage-2.8版本.html">
+            
+                <a href="../36_框架设计-SDWebImage框架-第2讲/05_SDWebImage-2.8版本.html">
+            
+                    
+                    36.5.SDWebImage-2.8版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38" >
+            
+                <span>
+            
+                    
+                    37.框架设计-SDWebImage框架-第3讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.38.1" data-path="../37_框架设计-SDWebImage框架-第3讲/01_SDWebImage-3.1版本.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/01_SDWebImage-3.1版本.html">
+            
+                    
+                    37.1.SDWebImage-3.1版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.2" data-path="../37_框架设计-SDWebImage框架-第3讲/02_SDWebImage-3.2版本-上.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/02_SDWebImage-3.2版本-上.html">
+            
+                    
+                    37.2.SDWebImage-3.2版本-上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.3" data-path="../37_框架设计-SDWebImage框架-第3讲/03_SDWebImage-3.2版本-下.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/03_SDWebImage-3.2版本-下.html">
+            
+                    
+                    37.3.SDWebImage-3.2版本-下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.4" data-path="../37_框架设计-SDWebImage框架-第3讲/04_SDWebImage-3.3版本-类结构.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/04_SDWebImage-3.3版本-类结构.html">
+            
+                    
+                    37.4.SDWebImage-3.3版本-类结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.5" data-path="../37_框架设计-SDWebImage框架-第3讲/05_SDWebImage-3.3版本-UI入口.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/05_SDWebImage-3.3版本-UI入口.html">
+            
+                    
+                    37.5.SDWebImage-3.3版本-UI入口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.6" data-path="../37_框架设计-SDWebImage框架-第3讲/06_SDWebImage-3.3版本-管理器.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/06_SDWebImage-3.3版本-管理器.html">
+            
+                    
+                    37.6.SDWebImage-3.3版本-管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.7" data-path="../37_框架设计-SDWebImage框架-第3讲/07_SDWebImage-3.3版本-下载器.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/07_SDWebImage-3.3版本-下载器.html">
+            
+                    
+                    37.7.SDWebImage-3.3版本-下载器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.8" data-path="../37_框架设计-SDWebImage框架-第3讲/08_SDWebImage-3.3版本-缓存器.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/08_SDWebImage-3.3版本-缓存器.html">
+            
+                    
+                    37.8.SDWebImage-3.3版本-缓存器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.9" data-path="../37_框架设计-SDWebImage框架-第3讲/09_SDWebImage-3.3版本-辅助功能.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/09_SDWebImage-3.3版本-辅助功能.html">
+            
+                    
+                    37.9.SDWebImage-3.3版本-辅助功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.38.10" data-path="../37_框架设计-SDWebImage框架-第3讲/10_分享.html">
+            
+                <a href="../37_框架设计-SDWebImage框架-第3讲/10_分享.html">
+            
+                    
+                    37.10.分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39" >
+            
+                <span>
+            
+                    
+                    38.项目实战-第1讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.39.1" data-path="../38_项目实战-第1讲/01_项目实战-组件化设计-项目分层.html">
+            
+                <a href="../38_项目实战-第1讲/01_项目实战-组件化设计-项目分层.html">
+            
+                    
+                    38.1.项目实战-组件化设计-项目分层
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.2" data-path="../38_项目实战-第1讲/02_项目实战-组件化设计-新建静态库.html">
+            
+                <a href="../38_项目实战-第1讲/02_项目实战-组件化设计-新建静态库.html">
+            
+                    
+                    38.2.项目实战-组件化设计-新建静态库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.3" data-path="../38_项目实战-第1讲/03_项目实战-组件化设计-主程序引入静态库.html">
+            
+                <a href="../38_项目实战-第1讲/03_项目实战-组件化设计-主程序引入静态库.html">
+            
+                    
+                    38.3.项目实战-组件化设计-主程序引入静态库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.4" data-path="../38_项目实战-第1讲/04_项目实战-组件化设计-静态库引入静态库.html">
+            
+                <a href="../38_项目实战-第1讲/04_项目实战-组件化设计-静态库引入静态库.html">
+            
+                    
+                    38.4.项目实战-组件化设计-静态库引入静态库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.5" data-path="../38_项目实战-第1讲/05_项目实战-组件化设计-层级调用-出现bug.html">
+            
+                <a href="../38_项目实战-第1讲/05_项目实战-组件化设计-层级调用-出现bug.html">
+            
+                    
+                    38.5.项目实战-组件化设计-层级调用-出现bug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.6" data-path="../38_项目实战-第1讲/06_项目实战-组件化设计-网络基础库分析.html">
+            
+                <a href="../38_项目实战-第1讲/06_项目实战-组件化设计-网络基础库分析.html">
+            
+                    
+                    38.6.项目实战-组件化设计-网络基础库分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.7" data-path="../38_项目实战-第1讲/07_项目实战-组件化设计-实业务层分析.html">
+            
+                <a href="../38_项目实战-第1讲/07_项目实战-组件化设计-实业务层分析.html">
+            
+                    
+                    38.7.项目实战-组件化设计-实业务层分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.39.8" data-path="../38_项目实战-第1讲/08_项目实战-组件化设计-解决bug.html">
+            
+                <a href="../38_项目实战-第1讲/08_项目实战-组件化设计-解决bug.html">
+            
+                    
+                    38.8.项目实战-组件化设计-解决bug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40" >
+            
+                <span>
+            
+                    
+                    39.项目实战-第2讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.40.1" data-path="../39_项目实战-第2讲/01.html">
+            
+                <a href="../39_项目实战-第2讲/01.html">
+            
+                    
+                    39.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.2" data-path="../39_项目实战-第2讲/02.html">
+            
+                <a href="../39_项目实战-第2讲/02.html">
+            
+                    
+                    39.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.3" data-path="../39_项目实战-第2讲/03.html">
+            
+                <a href="../39_项目实战-第2讲/03.html">
+            
+                    
+                    39.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.4" data-path="../39_项目实战-第2讲/04.html">
+            
+                <a href="../39_项目实战-第2讲/04.html">
+            
+                    
+                    39.4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.5" data-path="../39_项目实战-第2讲/05.html">
+            
+                <a href="../39_项目实战-第2讲/05.html">
+            
+                    
+                    39.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.6" data-path="../39_项目实战-第2讲/06.html">
+            
+                <a href="../39_项目实战-第2讲/06.html">
+            
+                    
+                    39.6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.7" data-path="../39_项目实战-第2讲/07.html">
+            
+                <a href="../39_项目实战-第2讲/07.html">
+            
+                    
+                    39.7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.8" data-path="../39_项目实战-第2讲/08.html">
+            
+                <a href="../39_项目实战-第2讲/08.html">
+            
+                    
+                    39.8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.9" data-path="../39_项目实战-第2讲/09.html">
+            
+                <a href="../39_项目实战-第2讲/09.html">
+            
+                    
+                    39.9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.10" data-path="../39_项目实战-第2讲/10.html">
+            
+                <a href="../39_项目实战-第2讲/10.html">
+            
+                    
+                    39.10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.11" data-path="../39_项目实战-第2讲/11.html">
+            
+                <a href="../39_项目实战-第2讲/11.html">
+            
+                    
+                    39.11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.40.12" data-path="../39_项目实战-第2讲/12.html">
+            
+                <a href="../39_项目实战-第2讲/12.html">
+            
+                    
+                    39.12
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41" >
+            
+                <span>
+            
+                    
+                    40.项目实战-第3讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.41.1" data-path="../40_项目实战-第3讲/01_版本迭代-2-0版本-HomeCell-类结构.html">
+            
+                <a href="../40_项目实战-第3讲/01_版本迭代-2-0版本-HomeCell-类结构.html">
+            
+                    
+                    40.1.版本迭代-2-0版本-HomeCell-类结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.2" data-path="../40_项目实战-第3讲/02_版本迭代-2-0版本-HomeCell-功能更新.html">
+            
+                <a href="../40_项目实战-第3讲/02_版本迭代-2-0版本-HomeCell-功能更新.html">
+            
+                    
+                    40.2.版本迭代-2-0版本-HomeCell-功能更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.3" data-path="../40_项目实战-第3讲/03_版本迭代-2-1版本-Home完善.html">
+            
+                <a href="../40_项目实战-第3讲/03_版本迭代-2-1版本-Home完善.html">
+            
+                    
+                    40.3.版本迭代-2-1版本-Home完善
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.4" data-path="../40_项目实战-第3讲/04_版本迭代-2-2版本-HomeRank.html">
+            
+                <a href="../40_项目实战-第3讲/04_版本迭代-2-2版本-HomeRank.html">
+            
+                    
+                    40.4.版本迭代-2-2版本-HomeRank
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.5" data-path="../40_项目实战-第3讲/05_版本迭代-2-3版本-Video控制器-上.html">
+            
+                <a href="../40_项目实战-第3讲/05_版本迭代-2-3版本-Video控制器-上.html">
+            
+                    
+                    40.5.版本迭代-2-3版本-Video控制器-上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.6" data-path="../40_项目实战-第3讲/06_版本迭代-2-3版本-Video控制器-下.html">
+            
+                <a href="../40_项目实战-第3讲/06_版本迭代-2-3版本-Video控制器-下.html">
+            
+                    
+                    40.6.版本迭代-2-3版本-Video控制器-下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.7" data-path="../40_项目实战-第3讲/07_版本迭代-2-3版本-投屏演示.html">
+            
+                <a href="../40_项目实战-第3讲/07_版本迭代-2-3版本-投屏演示.html">
+            
+                    
+                    40.7.版本迭代-2-3版本-投屏演示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.41.8" data-path="../40_项目实战-第3讲/08.html">
+            
+                <a href="../40_项目实战-第3讲/08.html">
+            
+                    
+                    40.8.扩展知识-安卓组件化设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42" >
+            
+                <span>
+            
+                    
+                    41.项目实战-第4讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.42.1" data-path="../41_项目实战-第4讲/01_项目实战-视频播放器-类层级关系.html">
+            
+                <a href="../41_项目实战-第4讲/01_项目实战-视频播放器-类层级关系.html">
+            
+                    
+                    41.1.项目实战-视频播放器-类层级关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.2" data-path="../41_项目实战-第4讲/02_项目实战-版本迭代-2-3版本-创建播放器流程.html">
+            
+                <a href="../41_项目实战-第4讲/02_项目实战-版本迭代-2-3版本-创建播放器流程.html">
+            
+                    
+                    41.2.项目实战-版本迭代-2-3版本-创建播放器流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.3" data-path="../41_项目实战-第4讲/03_项目实战-版本迭代-2-3版本-播放器功能列表-进度条.html">
+            
+                <a href="../41_项目实战-第4讲/03_项目实战-版本迭代-2-3版本-播放器功能列表-进度条.html">
+            
+                    
+                    41.3.项目实战-版本迭代-2-3版本-播放器功能列表-进度条
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.4" data-path="../41_项目实战-第4讲/04_项目实战-版本迭代-2-3版本-播放器功能列表-播放状态.html">
+            
+                <a href="../41_项目实战-第4讲/04_项目实战-版本迭代-2-3版本-播放器功能列表-播放状态.html">
+            
+                    
+                    41.4.项目实战-版本迭代-2-3版本-播放器功能列表-播放状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.5" data-path="../41_项目实战-第4讲/05_项目实战-版本迭代-2-3版本-播放器功能列表-缓冲进度.html">
+            
+                <a href="../41_项目实战-第4讲/05_项目实战-版本迭代-2-3版本-播放器功能列表-缓冲进度.html">
+            
+                    
+                    41.5.项目实战-版本迭代-2-3版本-播放器功能列表-缓冲进度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.6" data-path="../41_项目实战-第4讲/06_项目实战-版本迭代-2-3版本-播放器功能列表-音量控制.html">
+            
+                <a href="../41_项目实战-第4讲/06_项目实战-版本迭代-2-3版本-播放器功能列表-音量控制.html">
+            
+                    
+                    41.6.项目实战-版本迭代-2-3版本-播放器功能列表-音量控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.7" data-path="../41_项目实战-第4讲/07_项目实战-版本迭代-2-4版本.html">
+            
+                <a href="../41_项目实战-第4讲/07_项目实战-版本迭代-2-4版本.html">
+            
+                    
+                    41.7.项目实战-版本迭代-2-4版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.8" data-path="../41_项目实战-第4讲/08_项目实战-版本迭代-2-5版本.html">
+            
+                <a href="../41_项目实战-第4讲/08_项目实战-版本迭代-2-5版本.html">
+            
+                    
+                    41.8.项目实战-版本迭代-2-5版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.9" data-path="../41_项目实战-第4讲/09_项目实战-版本迭代-2-6版本.html">
+            
+                <a href="../41_项目实战-第4讲/09_项目实战-版本迭代-2-6版本.html">
+            
+                    
+                    41.9.项目实战-版本迭代-2-6版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.10" data-path="../41_项目实战-第4讲/10_项目实战-版本迭代-2-9版本-投屏协议介绍.html">
+            
+                <a href="../41_项目实战-第4讲/10_项目实战-版本迭代-2-9版本-投屏协议介绍.html">
+            
+                    
+                    41.10.项目实战-版本迭代-2-9版本-投屏协议介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.11" data-path="../41_项目实战-第4讲/11_项目实战-版本迭代-2-9版本-投屏流程.html">
+            
+                <a href="../41_项目实战-第4讲/11_项目实战-版本迭代-2-9版本-投屏流程.html">
+            
+                    
+                    41.11.项目实战-版本迭代-2-9版本-投屏流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.42.12" data-path="../41_项目实战-第4讲/12_解答.html">
+            
+                <a href="../41_项目实战-第4讲/12_解答.html">
+            
+                    
+                    41.12.解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43" >
+            
+                <span>
+            
+                    
+                    42.项目实战-第5讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.43.1" data-path="../42_项目实战-第5讲/01.html">
+            
+                <a href="../42_项目实战-第5讲/01.html">
+            
+                    
+                    42.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.2" data-path="../42_项目实战-第5讲/02.html">
+            
+                <a href="../42_项目实战-第5讲/02.html">
+            
+                    
+                    42.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.3" data-path="../42_项目实战-第5讲/03.html">
+            
+                <a href="../42_项目实战-第5讲/03.html">
+            
+                    
+                    42.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.4" data-path="../42_项目实战-第5讲/04.html">
+            
+                <a href="../42_项目实战-第5讲/04.html">
+            
+                    
+                    42.4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.5" data-path="../42_项目实战-第5讲/05.html">
+            
+                <a href="../42_项目实战-第5讲/05.html">
+            
+                    
+                    42.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.6" data-path="../42_项目实战-第5讲/06.html">
+            
+                <a href="../42_项目实战-第5讲/06.html">
+            
+                    
+                    42.6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.7" data-path="../42_项目实战-第5讲/07.html">
+            
+                <a href="../42_项目实战-第5讲/07.html">
+            
+                    
+                    42.7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.43.8" data-path="../42_项目实战-第5讲/08.html">
+            
+                <a href="../42_项目实战-第5讲/08.html">
+            
+                    
+                    42.8
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44" >
+            
+                <span>
+            
+                    
+                    43.项目实战-第6讲
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.44.1" data-path="../43_项目实战-第6讲/01.html">
+            
+                <a href="../43_项目实战-第6讲/01.html">
+            
+                    
+                    43.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.2" data-path="../43_项目实战-第6讲/02.html">
+            
+                <a href="../43_项目实战-第6讲/02.html">
+            
+                    
+                    43.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.3" data-path="../43_项目实战-第6讲/03.html">
+            
+                <a href="../43_项目实战-第6讲/03.html">
+            
+                    
+                    43.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.4" data-path="../43_项目实战-第6讲/04.html">
+            
+                <a href="../43_项目实战-第6讲/04.html">
+            
+                    
+                    43.4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.5" data-path="../43_项目实战-第6讲/05.html">
+            
+                <a href="../43_项目实战-第6讲/05.html">
+            
+                    
+                    43.5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.6" data-path="../43_项目实战-第6讲/06.html">
+            
+                <a href="../43_项目实战-第6讲/06.html">
+            
+                    
+                    43.6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.7" data-path="../43_项目实战-第6讲/07.html">
+            
+                <a href="../43_项目实战-第6讲/07.html">
+            
+                    
+                    43.7
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.8" data-path="../43_项目实战-第6讲/08.html">
+            
+                <a href="../43_项目实战-第6讲/08.html">
+            
+                    
+                    43.8
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.44.9" data-path="../43_项目实战-第6讲/09.html">
+            
+                <a href="../43_项目实战-第6讲/09.html">
+            
+                    
+                    43.9
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >24.7.插入数据-Optional自定义可选类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="247&#x63D2;&#x5165;&#x6570;&#x636E;-optional&#x81EA;&#x5B9A;&#x4E49;&#x53EF;&#x9009;&#x7C7B;&#x578B;">24.7.&#x63D2;&#x5165;&#x6570;&#x636E;-Optional&#x81EA;&#x5B9A;&#x4E49;&#x53EF;&#x9009;&#x7C7B;&#x578B;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06_插入数据-运算符函数.html" class="navigation navigation-prev " aria-label="Previous page: 24.6.插入数据-运算符函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08_插入数据-自定义可选类型-添加约束条件.html" class="navigation navigation-next " aria-label="Next page: 24.8.插入数据-自定义可选类型-添加约束条件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"24.7.插入数据-Optional自定义可选类型","level":"1.25.7","depth":2,"next":{"title":"24.8.插入数据-自定义可选类型-添加约束条件","level":"1.25.8","depth":2,"path":"24_数据库框架-第4讲-动态操作表-插入数据/08_插入数据-自定义可选类型-添加约束条件.md","ref":"24_数据库框架-第4讲-动态操作表-插入数据/08_插入数据-自定义可选类型-添加约束条件.md","articles":[]},"previous":{"title":"24.6.插入数据-运算符函数","level":"1.25.6","depth":2,"path":"24_数据库框架-第4讲-动态操作表-插入数据/06_插入数据-运算符函数.md","ref":"24_数据库框架-第4讲-动态操作表-插入数据/06_插入数据-运算符函数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"24_数据库框架-第4讲-动态操作表-插入数据/07_插入数据-Optional自定义可选类型.md","mtime":"2020-04-24T06:13:28.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-24T13:45:19.875Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

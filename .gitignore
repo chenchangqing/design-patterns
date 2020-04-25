@@ -78,3 +78,4 @@ _book
 README.mdSUMMARY.md
 .bookignore
 book.json
+node_modules

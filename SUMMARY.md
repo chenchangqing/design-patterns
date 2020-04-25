@@ -259,7 +259,7 @@
     * [29.6.RAC课后总结](30_框架设计-RAC框架-第2讲-RAC核心底层/06_RAC课后总结.md)
 * 31.框架设计-RAC框架-第3讲-RAC核心底层（中）
     * [31.1.课前简介](31_框架设计-RAC框架-第3讲-RAC核心底层（中）/01_课前简介.md)
-    * [31.2.RAC源码分析](31_框架设计-RAC框架-第3讲-RAC核心底层（中）/02_RAC源码分析.m d)
+    * [31.2.RAC源码分析](31_框架设计-RAC框架-第3讲-RAC核心底层（中）/02_RAC源码分析.md)
     * [31.3.RACPassthroug和RACSchedul](31_框架设计-RAC框架-第3讲-RAC核心底层（中）/03_RACPassthroug和RACSchedul.md)
     * [31.4.RACDisposable](31_框架设计-RAC框架-第3讲-RAC核心底层（中）/04_RACDisposable.md)
     * [31.5.RACSubject](31_框架设计-RAC框架-第3讲-RAC核心底层（中）/05_RACSubject.md)

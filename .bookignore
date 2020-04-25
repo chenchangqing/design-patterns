@@ -1,4 +1,5 @@
 .gitignore
 .bookignore
+book.json
 gitbook.sh
 node_modules/

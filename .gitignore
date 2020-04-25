@@ -1,8 +1,4 @@
 *~
 _book
 .DS_Store
-.gitbook.sh
-.bookignore
-book.json
 node_modules
-README.mdSUMMARY.md

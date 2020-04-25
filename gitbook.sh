@@ -1,4 +1,3 @@
-rm -r -f _book
 gitbook build
 git checkout master
 git add .
@@ -9,5 +8,6 @@ cp -r _book/* .
 git add .
 git commit -m 'build'
 git push -u origin gh-pages
+rm -r -f _book
 git checkout master
 echo "提交OK"

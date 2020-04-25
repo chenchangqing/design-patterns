@@ -77,3 +77,4 @@ _book
 .gitbook.sh
 README.mdSUMMARY.md
 .bookignore
+book.json

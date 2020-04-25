@@ -1,8 +1,4 @@
-**/z资料/
-**/ignore/
 .gitignore
-gitbook.sh
-.gitbook.sh.swp
 .bookignore
+gitbook.sh
 node_modules/
-book.json

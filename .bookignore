@@ -4,3 +4,5 @@
 gitbook.sh
 .gitbook.sh.swp
 .bookignore
+node_modules
+book.json
